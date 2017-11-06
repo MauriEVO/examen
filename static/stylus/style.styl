@@ -1,0 +1,378 @@
+@import 'nib'
+@import 'normalize'
+@import 'ico'
+@import 'fonts'
+
+
+//fuentes
+
+f_r = 'Lato-Regular', sans-serif
+f_b = 'latobold', sans-serif
+icomoon = 'icomoon'
+
+// GENRAL
+a
+	color inherit
+	&:focus
+		outline none
+		
+.w_ancho
+	max-width 1200px
+	width 94%
+	margin auto
+body
+	font-family f_r
+
+// SECCION HEADER
+.head_top
+	display flex
+	align-items center
+	justify-content space-between
+	max-width 980px
+	margin auto
+.head_itm
+	display flex
+	align-items center
+	justify-content flex-start
+.head--info
+	margin-right 20px
+	padding-left 40px
+	position relative
+	&:before
+		content ''
+		font-family icomoon
+		position absolute
+		top 3px
+		left 0
+		font-size 14px
+		color #76beea
+		
+	p, a
+		color #c0ccd3
+		font-size 13px
+		margin 0
+.head_text
+	&:before
+		font-size 12px
+		content '\e905'	
+.head_number
+	padding-left 25px
+	&:before
+		content '\e906'	
+.head_skype
+	padding-left 25px
+	&:before
+		content '\e908'			
+
+.head_cart
+	display flex
+	align-items center
+.head_icon_cart
+	margin-right 10px
+	color #76beea
+	font-weight bold
+	display inline-block
+.head_shopping
+	font-size 13px
+	color #c0ccd3
+	p
+		margin 0
+	span
+		color #76beea	
+
+
+.head_flex
+	display flex
+	height 90px
+	justify-content center
+	align-items center
+.h--logo_left
+	margin-right 8%
+	margin-left 0
+.header_nav
+	margin-right 30px
+.h_nav_list
+	display inline-block
+	vertical-align middle
+	margin-left 25px
+	&:first-child
+		margin-left 0
+	a
+		display block
+		font-size 14px
+		font-family f_r
+		color #6d7a83
+		position relative
+		padding-right 20px
+		&:after
+			content '\e903'
+			transform rotate(90deg)
+			font-family icomoon
+			font-size 10px
+			display inline-block
+			position absolute
+			top 0
+			right 0
+			height 10px
+			bottom 0
+			margin auto
+			font-weight bold
+		&:hover
+			color #21c2f8
+			transition all .3s
+.head_icon
+	font-size 20px
+	color #adadad
+
+
+// seccion BLOQUE B1
+.b1
+	.slick-next, .slick-prev
+		background rgba(0, 0, 0, .5)
+		width 60px
+		height 60px
+		z-index 20
+		border-radius 5px
+	.slick-next
+		right 0
+		&:before
+			content '\e903'
+			font-size 20px
+			font-family icomoon
+	.slick-prev
+		left 2px
+		&:before
+			content '\e902'
+			font-size 20px
+			font-family icomoon
+	.slick-dots
+		padding 0px 70px
+		box-sizing border-box
+		bottom 20px
+		text-align right
+		li 
+			width 12px
+			height 12px
+			button
+				width 12px
+				height 12px
+				&:before
+					content ''
+					width 12px
+					height 12px
+					border-radius 50%
+					display block
+					background #fff
+					border 1px solid #fff
+					box-sizing border-box
+					opacity 1
+	.slick-dots li.slick-active button:before
+		background #21c2f8
+		border 1px solid #fff
+		opacity 1		
+		
+.b1_center
+	max-width 840px
+	margin auto
+	width 100%
+	height 100%
+	padding-top 130px
+	position relative
+	padding-right 390px
+	box-sizing border-box
+	h2
+		text-align center
+		font-weight normal
+		color #fff
+		font-family f_r
+		text-transform uppercase
+		font-size 26px
+		strong
+			font-size 40px
+			font-weight normal
+			font-family f_b
+			display block
+			margin-top 5px
+.b1_cnt
+	max-width 475px
+	width 100%			
+.b1_text
+	color #fff
+	text-align center
+	font-size 14px		
+.b1_itm
+	width 100%
+	height 500px
+	background-position center center
+	background-size cover
+	background-repeat no-repeat
+.b1_box
+	margin-top 30px
+	display flex
+	align-items center
+	justify-content center
+.b1inner_itm
+	background #2f383d
+	border-radius 5px
+	display flex
+	align-items center
+	&:first-child
+		margin-right 3%
+	&:last-child
+		flex-direction row-reverse	
+
+.b1--ico_let
+	color #21c2f8
+	height 55px
+	line-height 55px
+	padding 0px 12px
+	font-size 40px
+	margin 0
+	border-right 1px solid #20272b
+.b1--ico_right
+	color #21c2f8
+	height 55px
+	line-height 55px
+	padding 0px 20px
+	font-size 40px
+	margin 0
+	color #a0fc1c
+	border-left 1px solid #20272b
+.b1_text_inner
+	color #fff
+	padding 0px 20px
+	box-sizing border-box
+	font-size 13px
+	strong
+		font-size 16px
+		display block		
+	&>*
+		margin 0
+
+.b1_fig
+	width 384px
+	position absolute
+	bottom -4px
+	right 0
+	img
+		width 100%
+		height auto
+		display block		
+
+// SECCION BLOQUE B2	
+.b2_main
+	background #EFF5F7
+	padding 55px 95px
+	box-sizing border-box
+	display flex
+	align-items center
+.b2--left
+	padding-right 110px	
+.b2_subtitle
+	h2
+		font-weight normal
+		font-family f_b
+		font-size 30px
+		color #2f383d 	
+.b2_text
+	color #9aa7af
+	font-size 14px
+	&>*
+		margin 0
+.b2--btn_blue
+	display inline-block
+	height 40px
+	line-height 40px
+	padding 0px 20px
+	font-size 14px
+	color #fff
+	background #0072a5
+	border-radius 5px
+	box-shadow 0px 4px 0px 0px #43a4cf
+	transition all .3s
+	&:active
+		box-shadow 0px 4px 0px 0px #0072a5
+
+
+// SECCION BLOQUE BE3
+
+.b3_article
+	display flex
+	justify-content center
+	padding 45px 0px
+	background #eeeae1
+.b3_itm_info
+	text-align center
+	width 33.3333333%
+	padding 0px 20px
+	box-sizing border-box
+.b3--img_top
+	border-radius 50%
+	width 105px
+	height 105px
+	overflow hidden
+	margin-bottom 15px
+.b3--fonsize
+	h3
+		font-weight normal
+		font-size 18px
+		font-family f_r
+	
+
+@media screen and (max-width 1060px)
+	.h_nav_list
+		margin-left 15px
+
+
+@media screen and (max-width 1024px)
+	.b1 
+		.slick-next, .slick-prev
+			opacity 0
+			visibility hidden
+	.b1_fig
+		display none		
+	.b1_itm
+		height 400px
+	.b2_main
+		padding 40px 40px
+	.b2--left
+		padding-right 50px
+	.b1_center
+		padding 0
+		margin auto
+		padding-top 90px
+	.b1_cnt
+		max-width inherit			
+	.b1 .slick-dots
+		text-align center
+@media screen and (max-width 768px)
+	.b2--left
+		padding 0
+		margin-bottom 20px
+	.b2_main
+		padding 40px 15px
+		flex-direction column
+
+@media screen and (max-width 640px)
+	.b1_center
+		padding-top 50px
+	.b1_center h2 strong
+		font-size 30px
+	.b1_box
+		flex-flow wrap
+		flex-direction column
+	.b1inner_itm
+		width 260px
+		margin auto
+	.b1inner_itm:first-child
+		margin auto
+		margin-bottom 15px
+	
+	.b3_article
+		flex-direction column
+	.b3_itm_info
+		width 100%
+		margin-bottom 30px
+		
+							
+		

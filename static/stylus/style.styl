@@ -22,6 +22,17 @@ a
 	margin auto
 body
 	font-family f_r
+	
+
+
+
+
+
+
+
+
+
+
 
 // SECCION HEADER
 .head_top
@@ -29,8 +40,9 @@ body
 	align-items center
 	justify-content space-between
 	max-width 980px
+	width 100%
 	margin auto
-	padding 5px 0px
+	padding 10px 0px
 .head_itm
 	display flex
 	align-items center
@@ -90,6 +102,11 @@ body
 .h--logo_left
 	margin-right 8%
 	margin-left 0
+	width 222px
+	img
+		width 100%
+		height auto
+		display block
 .header_nav
 	margin-right 30px
 .h_nav_list
@@ -124,6 +141,89 @@ body
 .head_icon
 	font-size 20px
 	color #adadad
+
+
+
+
+// menu responsive
+.overlay
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100%
+	z-index 200
+	opacity 0
+	visibility hidden
+	background #000
+	&.active
+		opacity .6
+		visibility visible
+.controls_responsive
+	width 40px
+	height 40px
+	position fixed
+	right 15px
+	top 18px
+	cursor pointer
+	z-index 400
+	span
+		font-size 30px
+		display inline-block
+		font-weight bold
+		position absolute
+	.open_menu
+		display none
+		color #2f383d
+		&.active
+			opacity 0
+			visibility hidden	
+	.close_menu
+		font-size 22px
+		opacity 0
+		visibility hidden
+		color #35b8c6
+		&.active
+			transition all .5s
+			opacity 1
+			visibility visible
+.change_responsive
+	width 250px
+	position fixed
+	top 0
+	right -250px
+	height 100%
+	background #fff
+	padding-top 80px
+	transition all .3s
+	z-index 300 	
+	.h_nav_list
+		display block
+		margin-bottom 20px
+		margin-left 20px
+		&:first-child
+			margin-left 20px
+		a
+			display inline-block
+			&:after
+				display none
+	.head_number
+		margin-left 20px
+		margin-top 20px
+		a
+			color #6d7a83
+	.head_cart
+		position absolute
+		top 25px
+		left 20px				
+	&.active
+		right 0			
+.wrappbody
+	position relative
+	left 0
+	transition all .3s
+	&.active
+		left -250px	
 
 
 // seccion BLOQUE B1
@@ -323,9 +423,27 @@ body
 @media screen and (max-width 1060px)
 	.h_nav_list
 		margin-left 15px
-
-
 @media screen and (max-width 1024px)
+
+	// MENU RESPONSIVE
+	.controls_responsive
+		.open_menu
+			display block	
+	// END	
+	.header_nav, .head_search
+		display none
+		
+	.head_flex
+		justify-content flex-start
+		height 70px
+	.h--logo_left
+		width 180px
+
+	.head_top
+		display none
+	
+
+
 	.b1 
 		.slick-next, .slick-prev
 			opacity 0
@@ -353,7 +471,6 @@ body
 	.b2_main
 		padding 40px 15px
 		flex-direction column
-
 @media screen and (max-width 640px)
 	.b1_center
 		padding-top 50px

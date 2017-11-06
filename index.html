@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
     <meta name="theme-color" content="#fff">
-    
+
 	<title>Examen</title>
 	<link rel="stylesheet" href="static/js/slick/slick-theme.css">
 	<link rel="stylesheet" href="static/js/slick/slick.css">
@@ -46,7 +46,7 @@
 				<a class="header_logo h--logo_left" href=""><img src="static/media/logo.png" width="222" height="56" alt=""></a>
 				<nav class="header_nav">
 					<ul>
-						<li class="h_nav_list"><a href="">Home</a></li>
+						<li class="h_nav_list"><a class="active" href="">Home</a></li>
 						<li class="h_nav_list"><a href="">Pages</a></li>
 						<li class="h_nav_list"><a href="">Portfolio </a></li>
 						<li class="h_nav_list"><a href="">Shop</a></li>
@@ -162,7 +162,9 @@
 	$(function(){
 		$('.single-item').slick({
 			dots: true,
-			infinite: true
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 4000
 		});
 		$.ajax({
 			dataType: 'json',
@@ -175,7 +177,7 @@
 				var items = info.data;
 				// recorriendo e imprimiendo su información:
 				for(var i = 0 ; i < items.length; i+=1 ){
-					$('<div class="b3_itm_info"><figure class="b3_fig b3--img_top"><img src="'+items[i].avatar+'" alt=""></figure><div class="b3_text b3--fonsize"><h3>'+items[i].first_name+ '<br>' +items[i].last_name+'</h3></div></div>').appendTo('.ope_Ajax');
+					$('<div class="b3_itm_info"><figure class="b3_fig b3--img_top"><img src="'+items[i].avatar+'" alt=""></figure><div class="b3_text b3--fonsize"><h3>'+items[i].first_name+' ' +items[i].last_name+'</h3></div></div>').appendTo('.ope_Ajax');
 				};
 			}
 		});
